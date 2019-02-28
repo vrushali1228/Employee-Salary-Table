@@ -1,0 +1,157 @@
+<div class="container">
+    <div class="heading">
+        <div class="col-md-4 column">
+            <h2>{{header.name}}</h2>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+                <div class="table-area">
+                    <form name="formData">
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>BasicSalary</label>
+                                    <input type="number" class="form-control" ng-model="salary.basicSalary " placeholder="basic salary of Employee">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>HRA</label>
+                                    <input type="number" class="form-control" ng-model="salary.hra" placeholder="Enter HRA">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Conveyance</label>
+                                    <input type="number" class="form-control" ng-model="salary.conveyance" placeholder="Enter the conveyance">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>providentFund</label>
+                                    <input type="number" class="form-control" ng-model="salary.providentFund" placeholder="Enter providentFund">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>ESI</label>
+                                    <input type="number" class="form-control" ng-model="salary.esi" placeholder="enter esi">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Loan</label>
+                                    <input type="number" class="form-control" ng-model="salary.loan" placeholder="enter the loan">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>ProfessionalTax</label>
+                                    <input type="number" class="form-control" ng-model="salary.professionalTax" placeholder="enter the professionalTax">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>TSD</label>
+                                    <input type="number" class="form-control" ng-model="salary.tsd" placeholder="enter the tsd">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>LateMark</label>
+                                    <input type="number" class="form-control" ng-model="salary.lateMark" placeholder="enter the lateMark">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Holidays</label>
+                                    <input type="number" class="form-control" ng-model="salary.holidays" placeholder="enter the holidays">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>ExtraWork</label>
+                                    <input type="number" class="form-control" ng-model="salary.extraWork" placeholder="enter the extraWork">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>TotalAddition</label>
+                                    <input type="number" class="form-control" ng-model="salary.totalAddition" placeholder="enter the totalAddition">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>TotalDeductions</label>
+                                    <input type="number" class="form-control" ng-model="salary.totalDeductions" placeholder="enter the totalDeductions">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>NetSalary</label>
+                                    <input type="number" class="form-control" ng-model="salary.netSalary" placeholder="enter the netSalary">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <label>{{salary.employees}}</label>
+                                    <select class="form-control" ng-model="salary.employees">
+                                        <option ng-repeat="employee in employees" value="{{employee._id}}">{{employee.firstName}} </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="text-center">
+
+                            <button class="btn btn-primary" type="submit" ui-sref="salary" ng-click="saveSalary()">Save</button>
+                            <button class="btn btn-danger" ui-sref="salary">Cancel </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

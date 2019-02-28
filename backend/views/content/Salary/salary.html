@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="heading">
+        <div class="col-md-4 column">
+            <h2>Salary table</h2>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="widget">
+                <div class="table-area">
+                    <div class="widget-title">
+                        <div class="pull-right">
+
+                            <input type="text" placeholder="search" ng-model="table.search">
+                            <a class="btn btn-primary" ui-sref="salarydetails">Create</a>
+
+                        </div>
+                    </div>
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+
+                                    <th>
+                                        Sr-No
+                                    </th>
+                                    <th>employee</th>
+                                    <th>
+                                        basic Salary
+                                    </th>
+                                    <th>
+                                        Allowance
+                                    </th>
+                                    <th>
+                                        ProvidentFund
+                                    </th>
+                                    <th>ProfessionalTax</th>
+                                    <th>NetSalary</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tr ng-repeat="salary in salaries | filter:table.search">
+                                <td>{{$index+1}}</td>
+                                <td>
+                                    <div>{{salary.employees}}</div>
+                                </td>
+
+                                <td>
+
+                                    <div>{{salary.basicSalary }}</div>
+                                </td>
+                                <td>
+
+                                    <div>{{salary.hra }}</div>
+                                </td>
+                                <td>
+                                    <div>{{salary.providentFund }}</div>
+                                </td>
+                                <td>
+                                    <div>{{salary.professionalTax}}</div>
+                                </td>
+                                <td>
+                                    <div>{{salary.netSalary}}</div>
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-primary" ui-sref="salaryEdit({id:salary._id})">Edit</a>
+                                    |
+                                    <a class="btn btn-warning" type="delete" ng-click="delete(salary._id)">Delete</a>
+
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
